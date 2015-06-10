@@ -16,6 +16,14 @@ my $pass = "2x5UByN6ElGU8kMF2t";
 
 print header;
 
+print "<title>Bacula Web App</title>";
+
+print "<body align=\"center\"> THIS IS IN DEV DO NOT USE</body>";
+
+print "<form align=\"center\" action=\"http://109.104.89.82:9594/search.pl\" method=\"post\">";
+print "<div align=\"center\">Server: <input name=\"server\" size=\"10\"></div>";
+print "<div align=\"center\">IP: <input name=\"ip\" size=\"15\"><input type=\"submit\"></div>";
+
 print "<table align=\"center\" border=\"0\"> \n";
 print "<tr><td><a href=\"http://109.104.89.82:9594/add.pl\"/>Add</a></td><tr>";
 print "</table>";
@@ -24,11 +32,11 @@ print "<table align=\"center\" border=\"1\"> \n";
 
 print "<tr><td>Server</td><td>IP</td><td>Operating System</td><td>Backup Type</td><td>Quota</td><td>Used</td><td>Edit</td></tr>\n";
 
-$query = "SELECT server.server, server.ip, server.os, backup_client.backup_type, backup_client.allocated_quota, backup_client.used_quota FROM server, backup_client WHERE server.server = backup_client.server";
+$searchquery = "SELECT server.server, server.ip, server.os, backup_client.backup_type, backup_client.allocated_quota, backup_client.used_quota FROM server, backup_client WHERE server.server = backup_client.server";
 
 $dbh = DBI->connect("DBI:mysql:$database:$host", $user, $pass);
-$sql = $dbh->prepare($query)
-  or die "Can't prepare $query: $dbh->errstr\n";
+$sql = $dbh->prepare($searchquery)
+  or die "Can't prepare $searchquery: $dbh->errstr\n";
 
 $sql->execute();
 
