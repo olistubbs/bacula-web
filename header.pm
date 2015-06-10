@@ -11,8 +11,14 @@ print "<div align=\"center\">Server: <input name=\"server\" size=\"10\"></div>";
 print "<div align=\"center\">IP: <input name=\"ip\" size=\"15\"><input type=\"submit\"></div>";
 
 print "<table align=\"center\" border=\"0\"> \n";
-print "<tr><td><a href=\"http://109.104.89.82:9594/add.pl\"/>Add</a></td><tr>";
+print "<tr><td><a href=\"http://109.104.89.82:9594/add.pl\"/>Add</a></td><td><a href=\"http://109.104.89.82:9594/list.pl\"/>List</a></td><tr>";
 print "</table>";
 }
+
+$database = 'backups';
+$host = 'localhost';
+$user = 'backup';
+$pass = "2x5UByN6ElGU8kMF2t";
+
 
 1;
