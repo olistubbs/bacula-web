@@ -12,7 +12,7 @@ use warnings;
 my $database = 'backups';
 my $host = 'localhost';
 my $user = 'backup';
-my $pass = "2x5UByN6ElGU8kMF2t";
+my $pass = "--Redacted--";
 
 print header;
 
