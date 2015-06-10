@@ -2,6 +2,7 @@
 
 #print "Content-type: text/html\n\n";
 
+use header;
 use DBI;
 use DBD::mysql;
 
@@ -12,21 +13,11 @@ use warnings;
 my $database = 'backups';
 my $host = 'localhost';
 my $user = 'backup';
-my $pass = "--Redacted--";
+my $pass = "2x5UByN6ElGU8kMF2t";
 
 print header;
 
-print "<title>Bacula Web App</title>";
-
-print "<body align=\"center\"> THIS IS IN DEV DO NOT USE</body>";
-
-print "<form align=\"center\" action=\"http://109.104.89.82:9594/search.pl\" method=\"post\">";
-print "<div align=\"center\">Server: <input name=\"server\" size=\"10\"></div>";
-print "<div align=\"center\">IP: <input name=\"ip\" size=\"15\"><input type=\"submit\"></div>";
-
-print "<table align=\"center\" border=\"0\"> \n";
-print "<tr><td><a href=\"http://109.104.89.82:9594/add.pl\"/>Add</a></td><tr>";
-print "</table>";
+PrintHeader;
 
 print "<table align=\"center\" border=\"1\"> \n";
 
